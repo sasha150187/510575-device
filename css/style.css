@@ -13,7 +13,7 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: 'Gilroy', "Open Sans";
+  font-family: 'Gilroy', "Open Sans", sans-serif;
   color: #000000;
 }
 
@@ -90,23 +90,42 @@ ul, p, h2, h3, input, h1, fieldset, input {
   display: block;
   letter-spacing: 1px;
   margin-left: -3px;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 .searching-form {
   border: none;
-  margin-left: 40px;
-  margin-bottom: 48px;
+  border-bottom: 2px solid transparent;
+  padding-left: 40px;
   background-color: #f7e296;
   outline: none;
+  width: 100%;
+  padding-right: 10px;
 }
 
 .searching-form::placeholder {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 36px;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.searching-form:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.searching-form:focus::placeholder {
+  color: #000000;
+}
+
+.searching-form:focus {
+  transition: 0.2s linear;
+  border-bottom: 2px solid #000000;
+}
+
+.searching-form:focus ~ .form-search {
+  display: block;
 }
 
 .catalog-list {
@@ -115,14 +134,24 @@ ul, p, h2, h3, input, h1, fieldset, input {
   line-height: 18px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
+  width: 220px;
+}
+
+.catalog-list:hover {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.catalog-list:active {
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .user-link {
-  font-family: "Open Sans";
+  font-family: "Open Sans" , sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 36px;
   color: #000000;
+  display: inline-block;
 }
 
 .navigation-link {
@@ -132,6 +161,14 @@ ul, p, h2, h3, input, h1, fieldset, input {
   text-transform: uppercase;
   color: #000000;
   letter-spacing: 4px;
+}
+
+.navigation-link:hover {
+  color: rgba(0,0,0, 0.6);
+}
+
+.navigation-link:active {
+  color: rgba(0,0,0, 0.3);
 }
 
 .slide h2 {
@@ -145,7 +182,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .slide p {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
@@ -165,14 +202,32 @@ ul, p, h2, h3, input, h1, fieldset, input {
   vertical-align: middle;
   padding-top: 16px;
   padding-bottom: 16px;
-  background: linear-gradient(#ffffff 43%, #f0c52e 43%,#f0c52e 58%, #ffffff 58%);
   letter-spacing: 3.6px;
   margin-bottom: 48px;
   box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
 }
 
-.find-out-more:hover {
-  background: linear-gradient(#f0c52e 43%, #f0c52e 43%,#f0c52e 58%, #f0c52e 58%);
+.find-out-more::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 8px;
+  background-color: #f0c52e;
+  top: 21px;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.find-out-more:hover::after {
+  transform: scale(7);
+  transition: 0.3s;
+}
+
+.find-out-more:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .stats {
@@ -189,7 +244,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .stats td {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 20px;
@@ -217,13 +272,41 @@ ul, p, h2, h3, input, h1, fieldset, input {
   padding-bottom: 16px;
   padding-left: 9px;
   padding-right: 5px;
-  background: linear-gradient(transparent 43%, #f0c52e 43%,#f0c52e 58%, transparent  58%);
   letter-spacing: 4px;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: width 0.15s;
 }
 
-.slider-controls-item:hover {
-  background-image: linear-gradient(#f0c52e 43%, #f0c52e 43%,#f0c52e 58%, #f0c52e  58%);
+.slider-controls-item::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 7px;
+  background-color: #f0c52e;
+  top: 21px;
+  left: 0;
+  z-index: -2;
+  transition: 0.3s;
+}
+
+.slider-controls-item:hover::after {
+  transform: scale(7);
+  transition: 0.3s;
+}
+
+.slider-controls-item:active {
+  width: 100%;
+  position: relative;
+  background-color: #000000;
+  color: #f7e184;
+  transition: 0.15s;
+}
+
+.slider-controls-item:active::after  {
+  display: none;
 }
 
 .slider-item h2 {
@@ -237,7 +320,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .first-part {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
@@ -264,7 +347,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 .top,
 .bottom,
 .contacts-desc {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
@@ -350,7 +433,51 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 260px;
   text-align: center;
   vertical-align: middle;
-  background: linear-gradient(#ffffff 43%, #f0c52e 43%,#f0c52e 58%, #ffffff 58%);
+  position: relative;
+  overflow: hidden;
+}
+
+.more-info::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 7px;
+  background-color: #f0c52e;
+  top: 22px;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.more-info:hover::before {
+  transform: scale(7);
+  transition: 0.3s;
+}
+
+.more-info:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.write-to-us::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 7px;
+  background-color: #f0c52e;
+  top: 22px;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.write-to-us:hover::before {
+  transform: scale(7);
+  transition: 0.3s;
+}
+
+
+.write-to-us:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .footer {
@@ -358,7 +485,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .navigation-footer {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 36px;
@@ -375,7 +502,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 
 .services-list li:first-child,
 .services-list li:last-child {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
@@ -415,11 +542,11 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 16px;
   height: 16px;
   top: 75px;
-  right: 281px;
+  left: 3px;
 }
 
 .left-column {
-  width: 300px;
+  width: 440px;
   position: relative;
 }
 
@@ -438,7 +565,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 16px;
   height: 16px;
   bottom: 2px;
-  right: 54px;
+  right: 194px;
   opacity: 0.3;
 }
 
@@ -454,16 +581,28 @@ ul, p, h2, h3, input, h1, fieldset, input {
 
 .user-navigation li {
   width: 100px;
-  margin-left: 25px;
+  padding-left: 25px;
   text-align: right;
 }
 
 .user-navigation li:first-child {
-  margin-right: auto;
-  padding-right: 65px;
+  margin-right: 176px;
+  padding-right: 30px;
 }
 
-.user-navigation li:first-child::before {
+.user-list:hover .user-link  {
+  opacity: 0.6;
+}
+
+.user-list:active .user-link  {
+  opacity: 0.3;
+}
+
+.user-navigation li:nth-child(2) {
+  margin-right: 25px;
+}
+
+.ent::before {
   content: "";
   position: absolute;
   background-image: url(../svg-device/user.svg);
@@ -479,7 +618,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   margin-left: auto;
 }
 
-.user-navigation li:last-child::after {
+.bas::after {
   content: "";
   position: absolute;
   background-image: url(../svg-device/cart.svg);
@@ -491,7 +630,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   right: 70px;
 }
 
-.user-navigation li:nth-child(2)::before {
+.comp::before {
   content: "";
   position: absolute;
   background-image: url(../svg-device/compare.svg);
@@ -591,6 +730,18 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 160px;
   height: 160px;
   background-color: #f7e296;
+}
+
+.products-list:hover .products-link {
+  background-color: #f0c52e;
+}
+
+.products-list:active svg {
+  opacity: 0.3;
+}
+
+.products-list:active .products-title {
+  opacity: 0.3;
 }
 
 .products-link svg {
@@ -697,8 +848,8 @@ ul, p, h2, h3, input, h1, fieldset, input {
   background-image: url(../img/gray.png);
   background-repeat: no-repeat;
   background-position: center 422px;
-  z-index: -100;
   margin-bottom: 77px;
+  position: relative;
 }
 
 .main-header {
@@ -959,7 +1110,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .breadcrumbs a {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 36px;
@@ -1135,7 +1286,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .filters-input {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 14px;
@@ -1144,7 +1295,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 
 .min-price,
 .max-price {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 14px;
@@ -1160,7 +1311,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .checkbox {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 40px;
@@ -1173,7 +1324,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .circle label {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 40px;
@@ -1200,7 +1351,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .submit-button {
-  font-family: 'Gilroy', "Open Sans";
+  font-family: 'Gilroy', "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 18px;
@@ -1251,7 +1402,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 
 .type,
 .popularity  {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 14px;
@@ -1259,7 +1410,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .price {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -1414,4 +1565,116 @@ ul, p, h2, h3, input, h1, fieldset, input {
 .pagination li:nth-child(3) a,
 .pagination li:nth-child(4) a {
   text-align: center;
+}
+
+.form-search {
+  font-family: "Open Sans" , sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  color: rgba(0, 0, 0);
+  background-color: transparent;
+  border: 2px solid #000000;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 4px 18px;
+  display: none;
+}
+
+.form-search:hover {
+  transition: all 0.15s linear;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.form-search:active {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+  min-height: 48px;
+}
+
+.dji {
+  background-image: url(../img/logo-1.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
+}
+
+.dji:hover {
+  background-image: url(../img/dji-col.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.sp-gadgets {
+  background-image: url(../img/logo-2.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
+}
+
+.sp-gadgets:hover {
+  background-image: url(../img/sp-col.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
+}
+
+.go-pro {
+  background-image: url(../img/logo-3.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
+}
+
+.go-pro:hover {
+  background-image: url(../img/go-col.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
+}
+
+.vive {
+  background-image: url(../img/logo-4.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
+}
+
+.vive:hover {
+  background-image: url(../img/vive-col.png);
+  background-repeat: no-repeat;
+  background-size: 260px 100px;
+  width: 260px;
+  height: 100px;
+  cursor: pointer;
+  display: block;
 }
