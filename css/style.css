@@ -128,23 +128,6 @@ ul, p, h2, h3, input, h1, fieldset, input {
   display: block;
 }
 
-.catalog-list {
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 3.6px;
-  width: 220px;
-}
-
-.catalog-list:hover {
-  color: rgba(0, 0, 0, 0.6)
-}
-
-.catalog-list:active {
-  color: rgba(0, 0, 0, 0.3)
-}
-
 .user-link {
   font-family: "Open Sans" , sans-serif;
   font-weight: 300;
@@ -200,10 +183,10 @@ ul, p, h2, h3, input, h1, fieldset, input {
   padding-right: 41px;
   text-align: center;
   vertical-align: middle;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   letter-spacing: 3.6px;
-  margin-bottom: 48px;
+  margin-bottom: 53px;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -215,7 +198,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 220px;
   height: 8px;
   background-color: #f0c52e;
-  top: 21px;
+  top: 16px;
   left: 0;
   z-index: -1;
   transition: 0.3s;
@@ -287,6 +270,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   letter-spacing: 1px;
   padding-left: 1px;
   margin-bottom: 31px;
+  padding-top: 30px;
 }
 
 .first-part {
@@ -341,7 +325,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 .our-logistics {
   position: relative;
   padding-left: 35px;
-  margin-bottom: 49px;
+  margin-bottom: 54px;
 }
 
 .logistics-item {
@@ -395,8 +379,8 @@ ul, p, h2, h3, input, h1, fieldset, input {
   line-height: 18px;
   color: #000000;
   text-transform: uppercase;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   padding-left: 9px;
   letter-spacing: 3.6px;
   padding-right: 5px;
@@ -413,7 +397,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 260px;
   height: 7px;
   background-color: #f0c52e;
-  top: 22px;
+  top: 17px;
   left: 0;
   z-index: -1;
   transition: 0.3s;
@@ -434,7 +418,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   width: 260px;
   height: 7px;
   background-color: #f0c52e;
-  top: 22px;
+  top: 16px;
   left: 0;
   z-index: -1;
   transition: 0.3s;
@@ -537,6 +521,16 @@ ul, p, h2, h3, input, h1, fieldset, input {
   margin-bottom: 91px;
 }
 
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
+  top: 39px;
+  right: 460px;
+}
+
 .searching-form-label::before {
   content: "";
   position: absolute;
@@ -568,8 +562,8 @@ ul, p, h2, h3, input, h1, fieldset, input {
   background-size: 16px 16px;
   width: 16px;
   height: 16px;
-  bottom: 2px;
-  right: 194px;
+  bottom: 1px;
+  right: -26px;
   opacity: 0.3;
 }
 
@@ -704,7 +698,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .slide p {
-  margin-bottom: 38px;
+  margin-bottom: 43px;
 }
 
 .products-link {
@@ -804,14 +798,14 @@ ul, p, h2, h3, input, h1, fieldset, input {
   content: "";
   position: absolute;
   left: 277px;
-  top: -74px;
+  top: -44px;
   width: 7px;
   height: 319px;
   background-color: #000000;
 }
 
 .services {
-  padding-top: 160px;
+  padding-top: 130px;
 }
 
 .first-part {
@@ -822,7 +816,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
   background-image: url(../img/gray.png);
   background-repeat: no-repeat;
   background-position: center 422px;
-  margin-bottom: 77px;
+  margin-bottom: 82px;
   position: relative;
 }
 
@@ -892,7 +886,7 @@ ul, p, h2, h3, input, h1, fieldset, input {
 
 .map-link {
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 
 .navigation-list {
@@ -1754,6 +1748,14 @@ ul, p, h2, h3, input, h1, fieldset, input {
   display: none;
 }
 
+.slider-item p {
+  padding-bottom: 15px;
+}
+
+.slider-item-2 p {
+  width: 426px;
+}
+
 #product-1:checked ~ .slider-list .slider-item-1,
 #product-2:checked ~ .slider-list .slider-item-2,
 #product-3:checked ~ .slider-list .slider-item-3 {
@@ -1763,19 +1765,19 @@ ul, p, h2, h3, input, h1, fieldset, input {
 #product-1:checked ~ .slider-list .slider-item-1 {
   background: url("../svg-device/delivery.svg");
   background-repeat: no-repeat;
-  background-position: 558px 11px;
+  background-position: 558px 41px;
 }
 
 #product-2:checked ~ .slider-list .slider-item-2 {
-  background-image: url("../img/.png");
+  background-image: url("../svg-device/warranty.svg");
   background-repeat: no-repeat;
-  background-position: 116px 14px;
+  background-position: 543px 17px;
 }
 
 #product-3:checked ~ .slider-list .slider-item-3 {
-  background-image: url("../img/.png");
+  background-image: url("../svg-device/credit.svg");
   background-repeat: no-repeat;
-  background-position: 31px 67px;
+  background-position: 534px 17px;
 }
 
 #product-1:checked ~ .slider-button .slider-controls-item--1 {
@@ -1796,6 +1798,10 @@ ul, p, h2, h3, input, h1, fieldset, input {
   background-color: #000000;
   color: #f7e184;
   transition: 0.15s;
+  text-align: left;
+  padding-left: 28px;
+  padding-bottom: 11px;
+  padding-top: 11px;
 }
 
 #product-3:checked ~ .slider-button .slider-controls-item--3 {
@@ -1804,6 +1810,10 @@ ul, p, h2, h3, input, h1, fieldset, input {
   background-color: #000000;
   color: #f7e184;
   transition: 0.15s;
+  text-align: left;
+  padding-left: 42px;
+  padding-bottom: 11px;
+  padding-top: 11px;
 }
 
 #product-1:checked ~ .slider-button .slider-controls-item--1::after,
@@ -1813,9 +1823,8 @@ ul, p, h2, h3, input, h1, fieldset, input {
 }
 
 .slider-button {
-  padding-top: 6px;
+  padding-top: 36px;
 }
-
 
 .slider-controls-item {
   font-weight: 800;
@@ -1838,4 +1847,88 @@ ul, p, h2, h3, input, h1, fieldset, input {
   z-index: 2;
   transition: width 0.15s;
   cursor: pointer;
+}
+
+.slider-item-3 p {
+  width: 416px;
+}
+
+.map {
+  border-radius: 2px;
+}
+
+.catalog-list {
+  position: relative;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  width: 220px;
+}
+
+.catalog-list:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-menu:hover .sub-menu {
+  display: block;
+}
+
+.catalog-list:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-menu {
+  width: 220px;
+}
+
+.sub-menu {
+  position: absolute;
+  display: none;
+  padding-top: 24px;
+}
+
+.one a,
+.two a,
+.three a {
+  font-family: "Open Sans" , sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  color: rgba(0, 0, 0);
+  text-transform: none;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+
+.one a:hover,
+.two a:hover,
+.three a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.one a:active,
+.two a:active,
+.three a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.one {
+  width: 240px;
+}
+
+.two {
+  width: 200px;
+}
+
+.drop {
+  display: flex;
+  width: 1100px;
+  background-color: #f7e296;
+  z-index: 2;
+  position: relative;
+  padding-bottom: 34px;
+  right: 40px;
+  padding-left: 41px;
 }
