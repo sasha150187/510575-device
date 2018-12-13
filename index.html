@@ -206,7 +206,7 @@
             <h2 class="contacts-title">Контакты</h2>
             <p class="contacts-desc">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <a href="#" class="map-link">
-              <img alt="карта" class="map" src="img/map.jpg" width="560" height="222">
+              <img alt="Карта проезда" class="map" src="img/map.jpg" width="560" height="222">
             </a>
             <a href="#" class="write-to-us">Напишите нам</a>
           </div>
@@ -267,6 +267,13 @@
         </section>
       </div>
     </footer>
+    <div class="popUp">
+      <button aria-label="close-pop-up" type="button" class="modal-close"></button>
+      <div class="mapPopUp"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR8cMLDypSg7-wbVR90uBG_tqNLMEMa-Q&callback=initMap"
+    async defer>
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
