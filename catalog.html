@@ -11,18 +11,39 @@
       <div class="container">
         <nav class="main-nav">
           <div class="left-column">
-            <a class="main-logo">device</a>
-            <form action="#" method="get" class="form">
+            <a href="index.html" class="main-logo">device</a>
+            <form action="#" method="get" class="header-form">
               <input type="text" name="text" placeholder="Поиск по сайту" class="searching-form" id="searching-form">
               <label for="searching-form" class="searching-form-label"></label>
+              <input type="submit" value="Найти" class="form-search">
             </form>
-            <p class="catalog-list">Каталог товаров</p>
+            <ul class="main-menu">
+              <li class="catalog-list">Каталог товаров
+                <div class="sub-menu">
+                  <div class="drop">
+                    <ul class="one">
+                      <li><a href="catalog.html">Виртуальная реальность</a></li>
+                      <li><a href="catalog.html">Моноподы для селфи</a></li>
+                      <li><a href="catalog.html">Экшн-камеры</a></li>
+                    </ul>
+                    <ul class="two">
+                      <li><a href="catalog.html">Фитнес-браслеты</a></li>
+                      <li><a href="catalog.html">Умные часы</a></li>
+                    </ul>
+                    <ul class="three">
+                      <li><a href="catalog.html">Квадрокоптеры</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
           <div class="right-column">
             <ul class="user-navigation navigation-catalog">
-              <li class="user-list"><a href="#" class="user-link">Войти</a></li>
-              <li class="user-list"><a href="#" class="user-link">Сравнить</a></li>
-              <li class="user-list"><a href="#" class="user-link">Корзина</a></li>
+              <li class="user-list"><a href="#" class="user-link ent">Валентин Петухов</a></li>
+              <li class="user-list"><a href="#" class="user-link current">Выйти</a></li>
+              <li class="user-list"><a href="#" class="user-link comp">Сравнить</a></li>
+              <li class="user-list"><a href="#" class="user-link bas">Корзина</a></li>
             </ul>
             <ul class="site-navigation">
               <li class="navigation-item"><a href="#" class="navigation-link">Доставка</a></li>
@@ -31,16 +52,16 @@
             </ul>
           </div>
         </nav>
-      </div>
-    </header>
-    <main class="catalog-main">
-      <div class="container">
         <h1 class="catalog-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li><a href="index.html" class="main-page-link">Главная</a></li>
           <li><a href="#" class="catalog-link">Каталог товаров</a></li>
           <li><a href="#" class="monopod-link">Моноподы для селфи</a></li>
         </ul>
+      </div>
+    </header>
+    <main class="catalog-main">
+      <div class="container">
         <div class="catalog">
           <section class="filters">
             <h2 class="filter-title">Фильтр:</h2>

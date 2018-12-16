@@ -12,13 +12,13 @@
         <nav class="main-nav">
           <div class="left-column">
             <a class="main-logo">device</a>
-            <form action="#" method="get" class="form">
+            <form action="#" method="get" class="header-form">
               <input type="text" name="text" placeholder="Поиск по сайту" class="searching-form" id="searching-form">
               <label for="searching-form" class="searching-form-label"></label>
               <input type="submit" value="Найти" class="form-search">
             </form>
             <ul class="main-menu">
-              <li class="catalog-list">Каталог товаров</li>
+              <li class="catalog-list">Каталог товаров
                 <div class="sub-menu">
                   <div class="drop">
                     <ul class="one">
@@ -267,9 +267,30 @@
         </section>
       </div>
     </footer>
-    <div class="popUp">
-      <button aria-label="close-pop-up" type="button" class="modal-close"></button>
-      <div class="mapPopUp"></div>
+    <div class="popup">
+      <button aria-label="close-map" type="button" class="map-close"></button>
+      <div class="map-popup"></div>
+    </div>
+    <div class="main-popup">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <button aria-label="main-popup-close" type="button" class="modal-close"></button>
+      <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="flex-form">
+          <div class="form-item">
+            <label for="name-field">Ваше имя:</label>
+            <input class="name" type="text" id="name-field" name="name-field" placeholder="Представьтесь, пожалуйста" required>
+          </div>
+          <div class="form-item">
+            <label for="e-mail-field">Ваш e-mail:</label>
+            <input class="mail" type="text" id="e-mail-field" name="e-mail-field" placeholder="Для отправки ответа" required>
+          </div>
+          <div class="form-item">
+            <label for="letter-field">Текст письма:</label>
+            <textarea name="letter" id="letter-field" placeholder="В свободной форме"></textarea>
+          </div>
+        </div>
+        <button aria-label="submit-button" type="submit" class="button">отправить</button>
+      </form>
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR8cMLDypSg7-wbVR90uBG_tqNLMEMa-Q&callback=initMap"
     async defer>
