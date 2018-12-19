@@ -8,20 +8,12 @@ var nameField = document.querySelector("#name-field");
 var mailField = document.querySelector("#e-mail-field");
 var formButton = document.querySelector(".button");
 
-formButton.addEventListener("click", function(e) {
-  if (nameField.value === "") {
-    form.classList.add("error");
-  }
-  if (mailField.value === "") {
-    form.classList.add("error");
-  }
+nameField.addEventListener("invalid", function(e) {
+  nameField.setCustomValidity("Name field must contain 3 or more characters")
+  form.classList.add("error");
 });
 
 nameField.addEventListener("click", function(fieldEv) {
-  form.classList.remove("error");
-});
-
-mailField.addEventListener("click", function(mailEv) {
   form.classList.remove("error");
 });
 
@@ -37,6 +29,7 @@ writeUs.addEventListener("click", function(event) {
 modClose.addEventListener("click", function(e) {
   e.preventDefault();
   form.classList.remove("show");
+  form.classList.remove("animation-finished");
 });
 // открытие карты
 mapImg.addEventListener("click", function(e) {
@@ -61,6 +54,7 @@ window.addEventListener("keydown", function(e) {
   if (e.keyCode == 27) {
     if (form.classList.contains("show")) {
       form.classList.remove("show");
+      form.classList.remove("animation-finished");
     }
   }
 });
