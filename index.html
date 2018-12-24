@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Главная страница Device</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -57,9 +57,9 @@
           <input type="radio" id="hit-2" name="button">
           <input type="radio" id="hit-3" name="button">
           <div class="slides">
-            <label class="slider-controler slider-controler-1" for="hit-1"></label>
-            <label class="slider-controler slider-controler-2" for="hit-2"></label>
-            <label class="slider-controler slider-controler-3" for="hit-3"></label>
+            <label class="slider-controler slider-controler-1" for="hit-1" aria-label="slide 1"></label>
+            <label class="slider-controler slider-controler-2" for="hit-2" aria-label="slide 2"></label>
+            <label class="slider-controler slider-controler-3" for="hit-3" aria-label="slide 3"></label>
           </div>
           <ul class="slider-slides">
             <li class="slide slider-slide-1">
@@ -210,27 +210,26 @@
       <div class="container">
         <section class="footer-navigation">
           <h2 class="visually-hidden">Навигация</h2>
-          <ul class="navigation-list">
-            <li class="navigation-item"><a href="#" class="main-logo footer">device</a></li>
+          <span><a href="#" class="main-logo footer">device</a></span>
+          <ul class="navigation-list index">
             <li class="navigation-item"><a href="#" class="navigation-footer enter">Войти</a></li>
             <li class="navigation-item"><a href="#" class="navigation-footer compare">Сравнить</a></li>
-            <li class="navigation-item"><a href="#" class="navigation-footer cart">Корзина</a></li>
+            <li class="navigation-item cart-item"><a href="#" class="navigation-footer cart">Корзина</a></li>
           </ul>
         </section>
         <section class="footer-services">
           <h2 class="visually-hidden">Услуги компании</h2>
+          <span class="location">г. Москва, ул. Строителей, 15</span>
           <ul class="services-list">
-            <li>г. Москва, ул. Строителей, 15</li>
             <li class="services-item"><a href="#" class="services-link del">Доставка</a></li>
             <li class="services-item"><a href="#" class="services-link warr">Гарантия</a></li>
             <li class="services-item"><a href="#" class="services-link cont">Контакты</a></li>
-            <li class="phone">Тел.: +7 (495) 495-95-95</li>
           </ul>
+          <span class="phone">Тел.: +7 (495) 495-95-95</span>
         </section>
         <section class="footer-social">
           <h2 class="visually-hidden">Обратная связь</h2>
           <ul class="social-list">
-            <li class="strip"></li>
             <li>
               <a href="#" class="social fb">
                 <span class="visually-hidden">Фейсбук</span>
@@ -246,10 +245,10 @@
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
-            <li>
-              <a href="https://htmlacademy.ru/" class="html-academy"></a>
-            </li>
           </ul>
+          <span>
+            <a href="https://htmlacademy.ru/" class="html-academy" aria-label="htmlacademy webpage"></a>
+          </span>
         </section>
       </div>
     </footer>
