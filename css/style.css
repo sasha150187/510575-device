@@ -523,6 +523,7 @@ a {
 
 .footer {
   color: #ffc600;
+  width: 860px;
 }
 
 .footer:hover {
@@ -567,7 +568,17 @@ a {
   font-size: 15px;
   line-height: 30px;
   color: #ffffff;
-  width: 208px;
+  width: 360px;
+}
+
+.phone {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+  width: 360px;
+  text-align: right;
 }
 
 .footer-services {
@@ -577,16 +588,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.phone {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 30px;
-  color: #ffffff;
-  width: 208px;
-  text-align: right;
 }
 
 .services-link {
