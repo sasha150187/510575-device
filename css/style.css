@@ -516,6 +516,10 @@ a {
   transition: 0.3s;
 }
 
+.catalog-navigation .footer {
+  width: 170px;
+  margin-right: 500px;
+}
 
 .write-to-us:active {
   color: rgba(0, 0, 0, 0.3);
@@ -523,14 +527,15 @@ a {
 
 .footer {
   color: #ffc600;
-  width: 860px;
+  width: 170px;
+  margin-right: 690px;
 }
 
-.footer:hover {
+.catalog-navigation .footer:hover {
   opacity: 0.6;
 }
 
-.footer:active {
+.catalog-navigation .footer:active {
   opacity: 0.3;
 }
 
@@ -846,148 +851,88 @@ a {
 }
 
 .products-link {
-  display: block;
+  display: inline-block;
   position: relative;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 1);
   width: 160px;
+  vertical-align: top;
+  margin-right: 36px;
 }
 
-.products-link::before {
-  content: "";
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  background-color: #f7e296;
-  top: -193px;
-  left: 0;
-  z-index: 0;
+.products-link:last-of-type {
+  margin-right: 0;
+  margin-left: -2px;
 }
 
-.vr::after {
-  content: "";
-  position: absolute;
-  background-image: url(../svg-device/popular-1.svg);
-  background-repeat: no-repeat;
-  width: 97px;
-  height: 55px;
-  background-size: 97px 55px;
-  background-position: 0 0;
-  top: -141px;
-  left: 31px;
-  z-index: 1;
+.monopod .products-block {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 3px;
+  padding-bottom: 2px;
+}
+
+.action-cameras .products-block {
+  padding-left: 8px;
+  padding-top: 2px;
+}
+
+.bracelet .products-block {
+  padding-left: 3px;
+  padding-top: 4px;
+}
+
+.clock .products-block {
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.quadcopter .products-block {
+  padding-left: 1px;
+  padding-top: 6px;
 }
 
 .monopod {
-  padding-right: 40px;
+  padding-right: 36px;
 }
 
-.monopod::after {
-  content: "";
-  position: absolute;
-  background-image: url(../svg-device/popular-2.svg);
-  background-repeat: no-repeat;
-  width: 86px;
-  height: 117px;
-  background-size: 86px 117px;
-  background-position: 0 0;
-  top: -152px;
-  left: 38px;
-  z-index: 1;
-}
-
-.action-cameras::after {
-  content: "";
-  position: absolute;
-  background-image: url(../svg-device/popular-3.svg);
-  background-repeat: no-repeat;
-  width: 71px;
-  height: 87px;
-  background-size: 71px 87px;
-  background-position: 0 0;
-  top: -155px;
-  left: 49px;
-  z-index: 1;
-}
-
-.bracelet::after {
-  content: "";
-  position: absolute;
-  background-image: url(../svg-device/popular-4.svg);
-  background-repeat: no-repeat;
-  width: 107px;
-  height: 65px;
-  background-size: 107px 65px;
-  background-position: 0 0;
-  top: -143px;
-  left: 28px;
-  z-index: 1;
-}
-
-.clock::after {
-  content: "";
-  position: absolute;
-  background-image: url(../svg-device/popular-5.svg);
-  background-repeat: no-repeat;
-  width: 56px;
-  height: 98px;
-  background-size: 56px 98px;
-  background-position: 0 0;
-  top: -161px;
-  left: 55px;
-  z-index: 1;
-}
-
-.quadcopter::after {
-  content: "";
-  position: absolute;
-  background-image: url(../svg-device/poppular-6.svg);
-  background-repeat: no-repeat;
-  width: 132px;
-  height: 69px;
-  background-size: 132px 69px;
-  background-position: 0 0;
-  top: -144px;
-  left: 13px;
-  z-index: 1;
-}
-
-.vr:active::after,
-.monopod:active::after,
-.action-cameras:active::after,
-.bracelet:active::after,
-.clock:active::after,
-.quadcopter:active::after {
-  opacity: 0.3;
-}
-
-.products-link:hover::before {
-  background-color: #f0c52e;
-}
-
-.products-link:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.products-navigation {
+.products-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 34px;
+  background-color: #f7e296;
 }
 
-.products-list a {
-  margin-bottom: 36px;
+.products-link:hover .products-block {
+  background-color: #f0c52e;
+}
+
+.products-link:active .products-block {
+  background-color: #f0c52e;
+}
+
+.products-link:active  {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.products-link:active img  {
+  opacity: 0.3;
+}
+
+.main-catalog {
+  margin-bottom: 35px;
 }
 
 .services-catalog input {
@@ -1048,7 +993,6 @@ a {
   background-position: center 422px;
   margin-bottom: 82px;
   position: relative;
-  padding-top: 193px;
 }
 
 .main-header {
